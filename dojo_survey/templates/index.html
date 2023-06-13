@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>DOJO SURVEY</title>
+</head>
+<body>
+    <div class="form_area">
+        <form action='/fill_the_form' method='post'>
+            <h1 class="head">DOJO SURVEY</h1>
+                <label>NAME:</label><br>
+                <input type="text" name="name" class="input_name"><br>
+                <label>STATUS:</label><br>
+                <input type="radio" name="status" value="Full Time Student">FULL TIME STUDENT<br>
+                <input type="radio" name="status" value="Part Time Student">PART TIME STUDENT<br>
+                <label>DOJO LOCATION:</label><br>
+                <select name="location">
+                    <option value="">--SELECT ONE--</option>
+                    <option value="Chicago">CHICAGO</option>
+                    <option value="Burbank">BURBANK</option>
+                    <option value="Seattle">SEATTLE</option>
+                    <option value="Online">ONLINE</option>
+                </select><br>
+                <label>FAVORITE LANGUAGE:</label><br>
+                    <input type="checkbox" name="language" value="HTML">HTML<br>
+                    <input type="checkbox" name="language" value="CSS">CSS<br>
+                    <input type="checkbox" name="language" value="JAVASCRIPT">JAVASCRIPT<br>
+                    <input type="checkbox" name="language" value="PYTHON">PYTHON<br>
+                    <input type="checkbox" name="language" value="C#">C#<br>
+                <label>COMMENTS:</label><br>
+                <textarea name="comments" rows="10" cols="25" placeholder="TYPE HERE..."></textarea><br>
+            <input type="submit" value="SUBMIT" class="button">
+        </form>
+    </div>
+</body>
+</html>
